@@ -10,7 +10,7 @@ const services = [
   {
     icon: <Code className="w-8 h-8 text-[#667eea]" />,
     title: "Web Development",
-    description: "Custom web applications built with modern frameworks and best practices.",
+    description: "Custom web applications built with modern frameworks.",
   },
   {
     icon: <Smartphone className="w-8 h-8 text-[#667eea]" />,
