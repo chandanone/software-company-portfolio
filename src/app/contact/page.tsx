@@ -83,7 +83,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Phone</h3>
-                                        <p className="text-gray-600">+1 (555) 123-4567</p>
+                                        <p className="text-gray-600">+91 8892929292</p>
                                         <p className="text-gray-600">Mon-Fri 9am-6pm PST</p>
                                     </div>
                                 </div>
@@ -94,8 +94,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Office</h3>
-                                        <p className="text-gray-600">123 Tech Street</p>
-                                        <p className="text-gray-600">Silicon Valley, CA 94025</p>
+                                        <p className="text-gray-600">NEAR RNTI COLLEGE HATIA</p>
+                                        <p className="text-gray-600"> RANCHI Jharkhand 834003</p>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +236,7 @@ export default function ContactPage() {
             {/* Map Section */}
             <section className="h-[400px] w-full relative">
                 <iframe
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Tripund%20Solutions%20Pvt%20Ltd%20-%20Software%20&amp;%20Application%20Development%20Company%20MAGNET%20MALL,%20C-101,%20Eastern%20Business%20District,%20Neptune,%20Lal%20Bahadur%20Shastri%20Marg,%20Bhandup%20West,%20Mumbai,%20Maharashtra%20400078&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=TRIPUND%20TECHNOLOGIES%20PRIVATE%20LIMITED%2C%20NEAR%20RNTI%20COLLEGE%20HATIA%2C%20RANCHI%20Jharkhand%20834003&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

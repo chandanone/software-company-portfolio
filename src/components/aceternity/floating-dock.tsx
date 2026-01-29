@@ -22,11 +22,11 @@ export function FloatingIcon({ icon, delay = 0, className }: FloatingIconProps) 
                 rotate: [0, 360],
             }}
             transition={{
-                duration: 8,
+                duration: 3,
                 delay,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut",
+                //repeat: Infinity,
+                //repeatType: "loop",
+                //ease: "easeInOut",
             }}
             className={cn(
                 "p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg",

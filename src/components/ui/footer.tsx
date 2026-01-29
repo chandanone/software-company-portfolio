@@ -51,11 +51,11 @@ export function Footer() {
                         <div className="space-y-2 text-sm text-gray-400">
                             <div className="flex items-center space-x-2">
                                 <MapPin className="w-4 h-4" />
-                                <span>MAGNET MALL, C-101, Eastern Business District, Bhandup West, Mumbai</span>
+                                <span>TRIPUND TECHNOLOGIES PRIVATE LIMITED, NEAR RNTI COLLEGE HATIA, RANCHI Jharkhand 834003</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Phone className="w-4 h-4" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>+91 8892929292</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="w-4 h-4" />
@@ -101,7 +101,7 @@ export function Footer() {
                     {/* Google Map */}
                     <div className="h-[250px] w-full rounded-lg overflow-hidden">
                         <iframe
-                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Tripund%20Solutions%20Pvt%20Ltd%20-%20Software%20&amp;%20Application%20Development%20Company%20MAGNET%20MALL,%20C-101,%20Eastern%20Business%20District,%20Neptune,%20Lal%20Bahadur%20Shastri%20Marg,%20Bhandup%20West,%20Mumbai,%20Maharashtra%20400078&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=TRIPUND%20TECHNOLOGIES%20PRIVATE%20LIMITED%2C%20NEAR%20RNTI%20COLLEGE%20HATIA%2C%20RANCHI%20Jharkhand%20834003&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
