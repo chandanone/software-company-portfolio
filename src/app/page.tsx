@@ -53,7 +53,7 @@ export default function HomePage() {
                   Transforming ideas into innovative digital solutions that drive
                   business growth
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link href="/contact">
                     <motion.button
                       whileHover={{ scale: 1.05 }}

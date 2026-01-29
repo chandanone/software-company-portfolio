@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
     company: [
@@ -39,9 +40,15 @@ export function Footer() {
                     {/* Company Info */}
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6">
-                            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00aaff] to-[#0088cc] bg-clip-text text-transparent">
+                            {/* <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00aaff] to-[#0088cc] bg-clip-text text-transparent">
                                 Tripund Technologies
-                            </h3>
+                            </h3> */}
+                            <Image
+                                src="/new-logo-gemeini.png"
+                                alt="Tripund Technologies"
+                                width={200}
+                                height={200}
+                            />
                         </Link>
                         <p className="text-gray-400 mb-4 max-w-md">
                             Transforming ideas into innovative digital solutions. We build
