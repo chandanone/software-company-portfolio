@@ -17,12 +17,6 @@ const footerLinks = {
         { name: "Cloud Solutions", href: "/services#cloud" },
         { name: "AI/ML", href: "/services#ai" },
     ],
-    technologies: [
-        { name: "React & Next.js", href: "/technologies#react" },
-        { name: "Node.js", href: "/technologies#node" },
-        { name: "Python", href: "/technologies#python" },
-        { name: "DevOps", href: "/technologies#devops" },
-    ],
 };
 
 const socialLinks = [
@@ -34,52 +28,62 @@ const socialLinks = [
 
 export function Footer() {
     return (
-        <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+        <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white border-t border-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                    {/* Company Info */}
-                    <div className="lg:col-span-2">
-                        <Link href="/" className="inline-block mb-6">
-                            {/* <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00aaff] to-[#0088cc] bg-clip-text text-transparent">
-                                Tripund Technologies
-                            </h3> */}
-                            <Image
-                                src="/footer-logo.png"
-                                alt="Tripund Technologies"
-                                width={300}
-                                height={200}
-                            />
-                        </Link>
-                        <p className="text-gray-400 mb-4 max-w-md">
-                            Transforming ideas into innovative digital solutions. We build
-                            cutting-edge web and mobile applications that drive business
-                            growth.
-                        </p>
-                        <div className="space-y-2 text-sm text-gray-400">
-                            <div className="flex items-center space-x-2">
-                                <MapPin className="w-4 h-4" />
-                                <span>TRIPUND TECHNOLOGIES PRIVATE LIMITED, NEAR RNTI COLLEGE HATIA, RANCHI Jharkhand 834003</span>
+
+                {/* Top Section Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-x-8 gap-y-12">
+
+                    {/* Company Info - Logo & Contact Row (Full width on small/medium) */}
+                    <div className="col-span-2 md:col-span-3 lg:col-span-3">
+                        <div className="flex flex-row items-start justify-between gap-4 sm:gap-8">
+
+                            {/* Left Side: Logo and Tagline */}
+                            <div className="flex-1">
+                                <Link href="/" className="inline-block mb-4">
+                                    <Image
+                                        src="/footer-logo.png"
+                                        alt="Tripund Technologies"
+                                        width={180}
+                                        height={60}
+                                        className="brightness-110 h-auto w-auto"
+                                    />
+                                </Link>
+                                <p className="text-gray-400 text-[10px] sm:text-xs leading-relaxed max-w-[180px]">
+                                    Transforming ideas into innovative digital solutions. We build
+                                    growth-driven applications.
+                                </p>
                             </div>
-                            <div className="flex items-center space-x-2">
-                                <Phone className="w-4 h-4" />
-                                <span>+91 8892929292</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <Mail className="w-4 h-4" />
-                                <span>info@tripund.com</span>
+
+                            {/* Right Side: Contact Details with separator */}
+                            <div className="flex-1 space-y-3 text-[10px] sm:text-sm text-gray-400 border-l border-gray-700 pl-4 sm:pl-8">
+                                <div className="flex items-start space-x-2">
+                                    <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0 mt-0.5" />
+                                    <span className="leading-tight">NEAR RNTI COLLEGE HATIA, RANCHI 834003</span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
+                                    <span>+91 8892929292</span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
+                                    <span className="break-all">info@tripund.com</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Company Links */}
-                    <div>
-                        <h4 className="font-semibold mb-4">Company</h4>
-                        <ul className="space-y-2">
+                    {/* Company Column */}
+                    <div className="col-span-1">
+                        <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">
+                            Company
+                        </h4>
+                        <ul className="space-y-4">
                             {footerLinks.company.map((link) => (
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                                        className="text-gray-400 hover:text-[#00aaff] transition-colors text-xs sm:text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -88,15 +92,17 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Services Links */}
-                    <div>
-                        <h4 className="font-semibold mb-4">Services</h4>
-                        <ul className="space-y-2">
+                    {/* Services Column */}
+                    <div className="col-span-1">
+                        <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">
+                            Services
+                        </h4>
+                        <ul className="space-y-4">
                             {footerLinks.services.map((link) => (
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                                        className="text-gray-400 hover:text-[#00aaff] transition-colors text-xs sm:text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -104,40 +110,25 @@ export function Footer() {
                             ))}
                         </ul>
                     </div>
-
-                    {/* Google Map */}
-                    <div className="h-[250px] w-full rounded-lg overflow-hidden">
-                        <iframe
-                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=TRIPUND%20TECHNOLOGIES%20PRIVATE%20LIMITED%2C%20NEAR%20RNTI%20COLLEGE%20HATIA%2C%20RANCHI%20Jharkhand%20834003&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Office Location"
-                        />
-                    </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-12 pt-8 border-t border-gray-700">
-                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        <p className="text-sm text-gray-400">
-                            © {new Date().getFullYear()} Tripund Technologies. All rights
-                            reserved.
+                <div className="mt-16 pt-8 border-t border-gray-800/50">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <p className="text-[10px] sm:text-xs text-gray-500 text-center md:text-left order-2 md:order-1">
+                            © {new Date().getFullYear()} Tripund Technologies Private Limited. All rights reserved.
                         </p>
 
                         {/* Social Links */}
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-3 order-1 md:order-2">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.label}
                                     href={social.href}
                                     aria-label={social.label}
-                                    className="p-2 rounded-lg bg-gray-800 hover:bg-gradient-to-r hover:from-[#00aaff] hover:to-[#0088cc] transition-all duration-300 hover:scale-110"
+                                    className="p-2 sm:p-2.5 rounded-full bg-gray-800/40 border border-gray-700 hover:border-[#00aaff] hover:text-[#00aaff] transition-all duration-300"
                                 >
-                                    <social.icon className="w-5 h-5" />
+                                    <social.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                                 </a>
                             ))}
                         </div>
