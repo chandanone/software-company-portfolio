@@ -44,9 +44,9 @@ export function Footer() {
                                 Tripund Technologies
                             </h3> */}
                             <Image
-                                src="/new-logo-gemeini.png"
+                                src="/footer-logo.png"
                                 alt="Tripund Technologies"
-                                width={200}
+                                width={300}
                                 height={200}
                             />
                         </Link>

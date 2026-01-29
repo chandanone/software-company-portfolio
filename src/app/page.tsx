@@ -54,21 +54,22 @@ export default function HomePage() {
                   business growth
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link href="/contact">
+                  <Link href="/contact" className="w-full sm:w-auto">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-8 py-4 bg-gradient-to-r from-[#00aaff] to-[#0088cc] text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                      className="w-full px-8 py-4 bg-gradient-to-r from-[#00aaff] to-[#0088cc] text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
                     >
                       Get Started
                       <ArrowRight className="w-5 h-5" />
                     </motion.button>
                   </Link>
-                  <Link href="/portfolio">
+
+                  <Link href="/portfolio" className="w-full sm:w-auto">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
+                      className="w-full px-8 py-4 bg-white text-gray-900 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
                     >
                       View Our Work
                     </motion.button>
