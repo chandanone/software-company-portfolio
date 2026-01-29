@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import { FloatingDock } from "@/components/aceternity/floating-dock";
+// Optional: Import icons from lucide-react or similar if you prefer SVGs over emojis
+import {
+    Code2, Terminal, Smartphone, Cloud, Database, BrainCircuit
+} from "lucide-react";
 
 const technologies = [
     { icon: "⚛️", label: "React" },
@@ -25,33 +29,71 @@ const technologies = [
 const categories = [
     {
         title: "Frontend",
+        icon: <Code2 className="w-6 h-6" />,
         description: "Modern frameworks and libraries for building stunning user interfaces",
-        techs: ["React", "Next.js", "Vue", "Angular", "Tailwind CSS", "Framer Motion"],
+        techs: [
+            { name: "React", icon: "⚛️" },
+            { name: "Next.js", icon: "▲" },
+            { name: "Tailwind", icon: "🎨" },
+            { name: "Framer", icon: "✨" },
+            { name: "TypeScript", icon: "🔷" }
+        ],
     },
     {
         title: "Backend",
+        icon: <Terminal className="w-6 h-6" />,
         description: "Robust server-side technologies for scalable applications",
-        techs: ["Node.js", "Python", "Java", "Go", "Express", "Django"],
+        techs: [
+            { name: "Node.js", icon: "🟢" },
+            { name: "Python", icon: "🐍" },
+            { name: "Java", icon: "☕" },
+            { name: "Go", icon: "🐹" },
+            { name: "GraphQL", icon: "📊" }
+        ],
     },
     {
         title: "Mobile",
+        icon: <Smartphone className="w-6 h-6" />,
         description: "Cross-platform and native mobile development",
-        techs: ["React Native", "Flutter", "Swift", "Kotlin"],
+        techs: [
+            { name: "React Native", icon: "📱" },
+            { name: "Flutter", icon: "🐦" },
+            { name: "Swift", icon: "🍎" },
+            { name: "Kotlin", icon: "💜" }
+        ],
     },
     {
         title: "Cloud & DevOps",
+        icon: <Cloud className="w-6 h-6" />,
         description: "Infrastructure and deployment automation",
-        techs: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "CI/CD"],
+        techs: [
+            { name: "AWS", icon: "☁️" },
+            { name: "Docker", icon: "🐳" },
+            { name: "Kubernetes", icon: "☸️" },
+            { name: "Terraform", icon: "🏗️" }
+        ],
     },
     {
         title: "Databases",
+        icon: <Database className="w-6 h-6" />,
         description: "SQL and NoSQL database solutions",
-        techs: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Cassandra"],
+        techs: [
+            { name: "PostgreSQL", icon: "🗄️" },
+            { name: "MongoDB", icon: "🍃" },
+            { name: "Redis", icon: "🟥" },
+            { name: "MySQL", icon: "🐬" }
+        ],
     },
     {
         title: "AI/ML",
+        icon: <BrainCircuit className="w-6 h-6" />,
         description: "Artificial intelligence and machine learning",
-        techs: ["TensorFlow", "PyTorch", "OpenAI", "Hugging Face"],
+        techs: [
+            { name: "PyTorch", icon: "🔥" },
+            { name: "TensorFlow", icon: "🍊" },
+            { name: "OpenAI", icon: "🤖" },
+            { name: "Hugging Face", icon: "🤗" }
+        ],
     },
 ];
 
@@ -77,7 +119,7 @@ export default function TechnologiesPage() {
             </section>
 
             {/* Floating Icon Cloud */}
-            <section className="py-20 px-4 bg-white">
+            <section className="py-20 px-4 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -112,19 +154,27 @@ export default function TechnologiesPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2"
+                                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2 group"
                             >
-                                <h3 className="text-2xl font-bold mb-2 text-[#00aaff]">
-                                    {category.title}
-                                </h3>
-                                <p className="text-gray-600 mb-4">{category.description}</p>
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="p-2 bg-[#00aaff]/10 text-[#00aaff] rounded-lg group-hover:bg-[#00aaff] group-hover:text-white transition-colors">
+                                        {category.icon}
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-gray-800">
+                                        {category.title}
+                                    </h3>
+                                </div>
+                                <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                                    {category.description}
+                                </p>
                                 <div className="flex flex-wrap gap-2">
                                     {category.techs.map((tech) => (
                                         <span
-                                            key={tech}
-                                            className="px-3 py-1 bg-gradient-to-r from-[#00aaff]/10 to-[#0088cc]/10 text-[#00aaff] rounded-full text-sm font-medium"
+                                            key={tech.name}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 text-gray-700 border border-gray-100 rounded-lg text-xs font-semibold hover:bg-white hover:border-[#00aaff]/30 transition-colors"
                                         >
-                                            {tech}
+                                            <span>{tech.icon}</span>
+                                            {tech.name}
                                         </span>
                                     ))}
                                 </div>
