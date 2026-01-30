@@ -236,7 +236,7 @@ export default function ContactPage() {
             {/* Map Section */}
             <section className="h-[400px] w-full relative">
                 <iframe
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=TRIPUND%20TECHNOLOGIES%20PRIVATE%20LIMITED%2C%20NEAR%20RNTI%20COLLEGE%20HATIA%2C%20RANCHI%20Jharkhand%20834003&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2376.32598411206!2d85.3158799973338!3d23.28688179445822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f51fb7aaaaaaab%3A0x3815776f67179bec!2sRavindra%20Nath%20Tagore%20Inter%20College!5e0!3m2!1sen!2sus!4v1769769818504!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
