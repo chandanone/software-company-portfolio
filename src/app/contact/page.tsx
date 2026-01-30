@@ -94,6 +94,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Office</h3>
+                                        <p className="text-gray-600">Tripund Technologies Pvt. Ltd.</p>
                                         <p className="text-gray-600">NEAR RNTI COLLEGE HATIA</p>
                                         <p className="text-gray-600"> RANCHI Jharkhand 834003</p>
                                     </div>

@@ -58,7 +58,9 @@ export function Footer() {
                         <div className="space-y-3 text-[10px] sm:text-sm text-gray-400">
                             <div className="flex items-start space-x-2">
                                 <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0 mt-0.5" />
-                                <span className="leading-tight">NEAR RNTI COLLEGE HATIA, RANCHI 834003</span>
+                                <span className="leading-tight">Tripund Technologies Pvt. Ltd.<br />
+                                    NEAR RNTI COLLEGE HATIA, RANCHI 834003
+                                </span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
