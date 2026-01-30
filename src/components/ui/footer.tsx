@@ -42,9 +42,9 @@ export function Footer() {
                             <div className="flex-1">
                                 <Link href="/" className="inline-block mb-4">
                                     <Image
-                                        src="/footer-logo.png"
+                                        src="/logo-3.png"
                                         alt="Tripund Technologies"
-                                        width={180}
+                                        width={160}
                                         height={60}
                                         className="brightness-110 h-auto w-auto"
                                     />
