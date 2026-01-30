@@ -85,7 +85,7 @@ export default function AboutPage() {
 
                     <div className="relative">
                         {/* Timeline Line */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#00aaff] to-[#0088cc]" />
+                        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#00aaff] to-[#0088cc]" />
 
                         {timeline.map((item, index) => (
                             <motion.div
@@ -94,10 +94,10 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className={`relative flex items-center mb-16 ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                                className={`relative flex items-center mb-16 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                                     }`}
                             >
-                                <div className={`w-1/2 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12"}`}>
+                                <div className={`w-full md:w-1/2 pl-12 md:${index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"}`}>
                                     <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                                         <div className="text-3xl font-bold text-[#00aaff] mb-2">
                                             {item.year}
@@ -106,7 +106,7 @@ export default function AboutPage() {
                                         <p className="text-gray-600">{item.description}</p>
                                     </div>
                                 </div>
-                                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00aaff] rounded-full border-4 border-white shadow-lg" />
+                                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-[#00aaff] rounded-full border-4 border-white shadow-lg" />
                             </motion.div>
                         ))}
                     </div>
