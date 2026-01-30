@@ -32,48 +32,46 @@ export function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
                 {/* Top Section Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-x-8 gap-y-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 
-                    {/* Company Info - Logo & Contact Row (Full width on small/medium) */}
-                    <div className="col-span-2 md:col-span-3 lg:col-span-3">
-                        <div className="flex flex-row items-start justify-between gap-4 sm:gap-8">
+                    {/* 1. Brand / Logo */}
+                    <div className="col-span-1">
+                        <Link href="/" className="inline-block mb-1">
+                            <Image
+                                src="/footer-logo-3.png"
+                                alt="Tripund Technologies"
+                                width={100}
+                                height={60}
+                                className="brightness-110 h-auto w-auto"
+                            />
+                        </Link>
+                        <p className="text-gray-400 text-[10px] sm:text-xs leading-relaxed">
+                            Transforming ideas into <br />innovative digital solutions.
+                        </p>
+                    </div>
 
-                            {/* Left Side: Logo and Tagline */}
-                            <div className="flex-1">
-                                <Link href="/" className="inline-block mb-4">
-                                    <Image
-                                        src="/logo-3.png"
-                                        alt="Tripund Technologies"
-                                        width={160}
-                                        height={60}
-                                        className="brightness-110 h-auto w-auto"
-                                    />
-                                </Link>
-                                <p className="text-gray-400 text-[10px] sm:text-xs leading-relaxed max-w-[180px]">
-                                    Transforming ideas into innovative digital solutions. We build
-                                    growth-driven applications.
-                                </p>
+                    {/* 2. Contact Details */}
+                    <div className="col-span-1">
+                        <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">
+                            Contact
+                        </h4>
+                        <div className="space-y-3 text-[10px] sm:text-sm text-gray-400">
+                            <div className="flex items-start space-x-2">
+                                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0 mt-0.5" />
+                                <span className="leading-tight">NEAR RNTI COLLEGE HATIA, RANCHI 834003</span>
                             </div>
-
-                            {/* Right Side: Contact Details with separator */}
-                            <div className="flex-1 space-y-3 text-[10px] sm:text-sm text-gray-400 border-l border-gray-700 pl-4 sm:pl-8">
-                                <div className="flex items-start space-x-2">
-                                    <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0 mt-0.5" />
-                                    <span className="leading-tight">NEAR RNTI COLLEGE HATIA, RANCHI 834003</span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
-                                    <span>+91 8892929292</span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
-                                    <span className="break-all">info@tripund.com</span>
-                                </div>
+                            <div className="flex items-center space-x-2">
+                                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
+                                <span>+91 8892929292</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
+                                <span className="break-all">info@tripund.com</span>
                             </div>
                         </div>
                     </div>
 
-                    {/* Company Column */}
+                    {/* 3. Company Column */}
                     <div className="col-span-1">
                         <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">
                             Company
@@ -92,7 +90,7 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Services Column */}
+                    {/* 4. Services Column */}
                     <div className="col-span-1">
                         <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">
                             Services
