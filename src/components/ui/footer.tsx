@@ -23,7 +23,7 @@ const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "mailto:info@tripund.com", label: "Email" },
+    { icon: Mail, href: "mailto:info@charuailabs.com", label: "Email" },
 ];
 
 export function Footer() {
@@ -38,11 +38,11 @@ export function Footer() {
                     <div className="col-span-1">
                         <Link href="/" className="inline-block mb-1">
                             <Image
-                                src="/footer-logo-3.png"
-                                alt="Tripund Technologies"
+                                src="/logo-1.png"
+                                alt="Charu AI Labs"
                                 width={100}
-                                height={60}
-                                className="brightness-110 h-auto w-auto"
+                                height={100}
+                                className="brightness-125 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:opacity-80 transition-opacity"
                             />
                         </Link>
                         <p className="text-gray-400 text-[10px] sm:text-xs leading-relaxed">
@@ -58,17 +58,16 @@ export function Footer() {
                         <div className="space-y-3 text-[10px] sm:text-sm text-gray-400">
                             <div className="flex items-start space-x-2">
                                 <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0 mt-0.5" />
-                                <span className="leading-tight">Tripund Technologies Pvt. Ltd.<br />
-                                    Near RNTI College Hatia, Ranchi 834003
+                                <span className="leading-tight">Charu AI Labs, Ranchi<br />
                                 </span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
-                                <span>+91 XXXXXXXXXX</span>
+                                <span>+91 9508205680</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00aaff] shrink-0" />
-                                <span className="break-all">info@tripund.com</span>
+                                <span className="break-all">chadan868@gmail.com</span>
                             </div>
                         </div>
                     </div>
@@ -116,7 +115,7 @@ export function Footer() {
                 <div className="mt-16 pt-8 border-t border-gray-800/50">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                         <p className="text-[10px] sm:text-xs text-gray-500 text-center md:text-left order-2 md:order-1">
-                            © {new Date().getFullYear()} Tripund Technologies Private Limited. All rights reserved.
+                            © {new Date().getFullYear()} charuailabs Technologies Private Limited. All rights reserved.
                         </p>
 
                         {/* Social Links */}

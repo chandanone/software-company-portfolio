@@ -7,7 +7,7 @@ const timeline = [
     {
         year: "2015",
         title: "Foundation",
-        description: "Tripund Technologies was founded with a vision to transform digital experiences.",
+        description: "charuailabs Technologies was founded with a vision to transform digital experiences.",
     },
     {
         year: "2017",

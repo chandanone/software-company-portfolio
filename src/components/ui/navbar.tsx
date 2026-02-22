@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navItems = [
     { name: "Home", href: "/" },
@@ -30,14 +31,15 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
-                        <div className="relative w-auto h-22">
-                            <img
-                                src="/logo-3.png"
-                                alt="Tripund Technologies"
-                                className="w-full h-full object-contain"
-                            />
-                        </div>
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/logo-1.png"
+                            alt="Charu AI Labs"
+                            width={60}
+                            height={50}
+                            className="object-contain brightness-125 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-105 transition-transform duration-300"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}

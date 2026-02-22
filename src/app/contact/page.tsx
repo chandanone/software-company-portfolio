@@ -72,8 +72,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Email</h3>
-                                        <p className="text-gray-600">info@tripund.com</p>
-                                        <p className="text-gray-600">support@tripund.com</p>
+                                        <p className="text-gray-600">info@charuailabs.com</p>
+                                        <p className="text-gray-600">support@charuailabs.com</p>
                                     </div>
                                 </div>
 
@@ -94,9 +94,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Office</h3>
-                                        <p className="text-gray-600">Tripund Technologies Pvt. Ltd.</p>
-                                        <p className="text-gray-600">Near RNTI College Hatia</p>
-                                        <p className="text-gray-600"> Ranchi, Jharkhand 834003</p>
+                                        <p className="text-gray-600">Charu AI Labs</p>
+                                        <p className="text-gray-600"> Ranchi, Jharkhand 834001</p>
                                     </div>
                                 </div>
                             </div>

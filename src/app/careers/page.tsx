@@ -86,7 +86,7 @@ export default function CareersPage() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#00aaff] to-[#0088cc] bg-clip-text text-transparent">
-                            Why Tripund?
+                            Why charuailabs?
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             We're building a culture where innovation thrives, creativity is

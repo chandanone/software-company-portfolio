@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tripund Technologies - Innovative Digital Solutions",
+  title: "charuailabs Technologies - Innovative Digital Solutions",
   description: "Transforming ideas into innovative digital solutions. We build cutting-edge web and mobile applications that drive business growth.",
   icons: {
-    icon: "/logo-3.png",
+    icon: "/liquid-logo-1.png",
   },
 };
 
