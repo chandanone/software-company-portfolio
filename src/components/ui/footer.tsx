@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, MapPin, Phone, Heart } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const footerLinks = {
     company: [
@@ -114,9 +115,33 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-16 pt-8 border-t border-gray-800/50">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                        <p className="text-[10px] sm:text-xs text-gray-500 text-center md:text-left order-2 md:order-1">
-                            © {new Date().getFullYear()} charuailabs Technologies Private Limited. All rights reserved.
-                        </p>
+                        <div className="flex flex-col items-center md:items-start gap-2 order-2 md:order-1">
+                            <p className="text-[10px] sm:text-xs text-gray-500">
+                                © {new Date().getFullYear()} charuailabs Technologies Private Limited. All rights reserved.
+                            </p>
+                            <div className="flex items-center gap-2 text-xs font-bold text-gray-400">
+                                Crafted with
+                                <div className="relative flex items-center justify-center w-4 h-4">
+                                    <Heart className="w-4 h-4 text-red-500 hover:scale-110 transition-transform" />
+                                    <motion.div
+                                        animate={{
+                                            opacity: [0, 1, 0],
+                                            scale: [1, 1.2, 1]
+                                        }}
+                                        transition={{
+                                            repeat: Infinity,
+                                            duration: 2,
+                                            times: [0, 0.5, 1],
+                                            repeatDelay: 1
+                                        }}
+                                        className="absolute inset-0 flex items-center justify-center"
+                                    >
+                                        <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+                                    </motion.div>
+                                </div>
+                                by <span className="text-white font-black tracking-tight hover:text-[#00aaff] transition-colors cursor-pointer">CharuAILabs</span>
+                            </div>
+                        </div>
 
                         {/* Social Links */}
                         <div className="flex space-x-3 order-1 md:order-2">
