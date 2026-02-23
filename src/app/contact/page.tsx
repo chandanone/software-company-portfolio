@@ -72,8 +72,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Email</h3>
-                                        <p className="text-gray-600">info@charuailabs.com</p>
-                                        <p className="text-gray-600">support@charuailabs.com</p>
+                                        <p className="text-gray-600">chadan868@gmail.com</p>
                                     </div>
                                 </div>
 
@@ -83,8 +82,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-1">Phone</h3>
-                                        <p className="text-gray-600">+91 8892929292</p>
-                                        <p className="text-gray-600">Mon-Fri 9am-6pm PST</p>
+                                        <p className="text-gray-600">+91 9508205680</p>
+                                        <p className="text-gray-600">Mon-Fri 9am-6pm IST</p>
                                     </div>
                                 </div>
 
@@ -95,7 +94,7 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-semibold mb-1">Office</h3>
                                         <p className="text-gray-600">Charu AI Labs</p>
-                                        <p className="text-gray-600"> Ranchi, Jharkhand 834001</p>
+                                        <p className="text-gray-600"> Ranchi, Jharkhand 835303</p>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +235,7 @@ export default function ContactPage() {
             {/* Map Section */}
             <section className="h-[400px] w-full relative">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2376.32598411206!2d85.3158799973338!3d23.28688179445822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f51fb7aaaaaaab%3A0x3815776f67179bec!2sRavindra%20Nath%20Tagore%20Inter%20College!5e0!3m2!1sen!2sus!4v1769769818504!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1831.4459862087201!2d85.23799!3d23.355928!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1771818928285!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
