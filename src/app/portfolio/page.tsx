@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Github, Globe } from "lucide-react";
+import { ExternalLink, Github, Globe } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
@@ -78,7 +78,6 @@ const categories = ["All", "Web Development", "AI/ML", "Social Good", "Sustainab
 
 export default function PortfolioPage() {
     const [selectedCategory, setSelectedCategory] = useState("All");
-    const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
     const filteredProjects =
         selectedCategory === "All"
@@ -139,8 +138,7 @@ export default function PortfolioPage() {
                                     exit={{ opacity: 0, scale: 0.8 }}
                                     transition={{ duration: 0.4, delay: index * 0.05 }}
                                     whileHover={{ y: -10, scale: 1.02 }}
-                                    className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
-                                    onClick={() => setSelectedProject(project.id)}
+                                    className="bg-white rounded-xl shadow-lg overflow-hidden"
                                 >
                                     <div className="relative group/card h-52 bg-gray-100 overflow-hidden border-b">
                                         {/* Browser Header Mockup */}
@@ -209,88 +207,7 @@ export default function PortfolioPage() {
                 </div>
             </section>
 
-            {/* Project Detail Modal */}
-            <AnimatePresence>
-                {selectedProject !== null && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-                        onClick={() => setSelectedProject(null)}
-                    >
-                        <motion.div
-                            layoutId={`project-${selectedProject}`}
-                            className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {(() => {
-                                const project = projects.find((p) => p.id === selectedProject)!;
-                                return (
-                                    <>
-                                        <div className="h-64 bg-gradient-to-br from-[#00aaff] to-[#0088cc] flex items-center justify-center text-8xl relative">
-                                            {project.image}
-                                            <button
-                                                onClick={() => setSelectedProject(null)}
-                                                className="absolute top-4 right-4 p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
-                                            >
-                                                <X className="w-6 h-6 text-white" />
-                                            </button>
-                                        </div>
-                                        <div className="p-8">
-                                            <div className="text-sm text-[#00aaff] font-medium mb-2">
-                                                {project.category}
-                                            </div>
-                                            <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-                                            <p className="text-gray-700 mb-6">{project.description}</p>
 
-                                            <h3 className="text-xl font-bold mb-3">Technologies Used</h3>
-                                            <div className="flex flex-wrap gap-2 mb-6">
-                                                {project.technologies.map((tech) => (
-                                                    <span
-                                                        key={tech}
-                                                        className="px-4 py-2 bg-gradient-to-r from-[#00aaff]/10 to-[#0088cc]/10 text-[#00aaff] rounded-full text-sm font-medium"
-                                                    >
-                                                        {tech}
-                                                    </span>
-                                                ))}
-                                            </div>
-
-                                            <h3 className="text-xl font-bold mb-3">Results</h3>
-                                            <p className="text-gray-700 mb-6">{project.results}</p>
-
-                                            <div className="flex flex-col sm:flex-row gap-4">
-                                                {"github" in project && project.github && (
-                                                    <a
-                                                        href={project.github as string}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="flex-1 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
-                                                    >
-                                                        <Github className="w-5 h-5" />
-                                                        View Code
-                                                    </a>
-                                                )}
-                                                {"demo" in project && project.demo && (
-                                                    <a
-                                                        href={project.demo as string}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-[#00aaff] to-[#0088cc] text-white rounded-lg font-semibold hover:shadow-lg transition-shadow flex items-center justify-center gap-2"
-                                                    >
-                                                        <Globe className="w-5 h-5" />
-                                                        Live Website
-                                                    </a>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </>
-                                );
-                            })()}
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </div>
     );
 }
