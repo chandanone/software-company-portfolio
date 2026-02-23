@@ -196,9 +196,34 @@ export default function PortfolioPage() {
                                             </div>
                                         </div>
                                         <h3 className="text-xl font-bold mb-2 group-hover:text-[#00aaff] transition-colors">{project.title}</h3>
-                                        <p className="text-gray-600 text-sm line-clamp-2">
+                                        <p className="text-gray-600 text-sm line-clamp-2 mb-4">
                                             {project.description}
                                         </p>
+
+                                        <div className="flex gap-4 pt-2 border-t">
+                                            {"github" in project && (
+                                                <a
+                                                    href={project.github as string}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-[#00aaff] transition-colors"
+                                                >
+                                                    <Github className="w-4 h-4" />
+                                                    Code
+                                                </a>
+                                            )}
+                                            {"demo" in project && (
+                                                <a
+                                                    href={project.demo as string}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 text-sm font-semibold text-[#00aaff] hover:text-[#0088cc] transition-colors"
+                                                >
+                                                    <Globe className="w-4 h-4" />
+                                                    Live Demo
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                 </motion.div>
                             ))}
