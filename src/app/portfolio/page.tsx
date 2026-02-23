@@ -2,67 +2,46 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink } from "lucide-react";
+import { X, ExternalLink, Github, Globe } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
     {
         id: 1,
-        title: "E-Commerce Platform",
+        title: "Nabagram Ecommerce",
         category: "Web Development",
-        image: "🛒",
+        image: "https://api.microlink.io?url=https://nabagram-ecommerce.vercel.app/&screenshot=true&embed=screenshot.url",
         description: "A modern e-commerce platform with real-time inventory and payment processing.",
         technologies: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
         results: "300% increase in online sales",
+        github: "https://github.com/chandanone/nabagram-ecommerce",
+        demo: "https://nabagram-ecommerce.vercel.app/",
     },
     {
         id: 2,
-        title: "Healthcare App",
-        category: "Mobile Development",
-        image: "🏥",
-        description: "Patient management system with telemedicine capabilities.",
-        technologies: ["React Native", "Firebase", "WebRTC"],
-        results: "50,000+ active users",
+        title: "LoomGrad Technical LMS",
+        category: "Web Development",
+        image: "https://api.microlink.io?url=https://loomgrad.vercel.app/&screenshot=true&embed=screenshot.url",
+        description: "A comprehensive Technical Learning Management System with automated imports and payment integration.",
+        technologies: ["Next.js", "Prisma", "PostgreSQL", "Razorpay"],
+        results: "Streamlined course delivery and student management",
+        github: "https://github.com/chandanone/loomgrad",
+        demo: "https://loomgrad.vercel.app/",
     },
     {
         id: 3,
-        title: "AI Analytics Dashboard",
+        title: "TB-Sense AI",
         category: "AI/ML",
-        image: "📊",
-        description: "Business intelligence platform with predictive analytics.",
+        image: "https://api.microlink.io?url=https://tb-sense.vercel.app&screenshot=true&embed=screenshot.url",
+        description: "Advanced diagnostic tool for tuberculosis detection using AI/ML techniques.",
         technologies: ["React", "Python", "TensorFlow", "AWS"],
-        results: "40% improvement in decision-making speed",
-    },
-    {
-        id: 4,
-        title: "FinTech Solution",
-        category: "Web Development",
-        image: "💰",
-        description: "Secure financial management platform with automated reporting.",
-        technologies: ["Next.js", "Node.js", "MongoDB", "Plaid"],
-        results: "$10M+ transactions processed",
-    },
-    {
-        id: 5,
-        title: "Social Media App",
-        category: "Mobile Development",
-        image: "📱",
-        description: "Community-driven social platform with real-time messaging.",
-        technologies: ["Flutter", "Firebase", "GraphQL"],
-        results: "100,000+ downloads",
-    },
-    {
-        id: 6,
-        title: "Cloud Infrastructure",
-        category: "DevOps",
-        image: "☁️",
-        description: "Scalable cloud architecture with automated deployment.",
-        technologies: ["AWS", "Kubernetes", "Terraform", "Docker"],
-        results: "99.99% uptime achieved",
+        results: "High accuracy in diagnostic predictions",
+        github: "https://github.com/chandanone/TB-Sense",
+        demo: "https://tb-sense.vercel.app",
     },
 ];
 
-const categories = ["All", "Web Development", "Mobile Development", "AI/ML", "DevOps"];
+const categories = ["All", "Web Development", "AI/ML"];
 
 export default function PortfolioPage() {
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -130,14 +109,62 @@ export default function PortfolioPage() {
                                     className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
                                     onClick={() => setSelectedProject(project.id)}
                                 >
-                                    <div className="h-48 bg-gradient-to-br from-[#00aaff] to-[#0088cc] flex items-center justify-center text-6xl">
-                                        {project.image}
+                                    <div className="relative group/card h-52 bg-gray-100 overflow-hidden border-b">
+                                        {/* Browser Header Mockup */}
+                                        <div className="absolute top-0 left-0 right-0 h-6 bg-gray-200 flex items-center px-3 gap-1 z-10">
+                                            <div className="w-2 h-2 rounded-full bg-red-400" />
+                                            <div className="w-2 h-2 rounded-full bg-yellow-400" />
+                                            <div className="w-2 h-2 rounded-full bg-green-400" />
+                                            <div className="ml-2 flex-1 h-3 bg-white rounded-sm text-[8px] text-gray-400 px-2 flex items-center truncate">
+                                                {"demo" in project ? project.demo : "loading..."}
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-6 w-full h-full relative">
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover object-top transition-transform duration-700 group-hover/card:scale-105"
+                                                unoptimized={project.image.includes('microlink')}
+                                            />
+                                        </div>
+
+                                        {/* Quick Links Overlay */}
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
+                                            {"github" in project && (
+                                                <a
+                                                    href={project.github as string}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="p-3 bg-white rounded-full hover:bg-gray-100 transition-transform hover:scale-110 shadow-xl text-gray-900"
+                                                    title="GitHub Repository"
+                                                >
+                                                    <Github className="w-5 h-5" />
+                                                </a>
+                                            )}
+                                            {"demo" in project && (
+                                                <a
+                                                    href={project.demo as string}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="p-3 bg-[#00aaff] rounded-full hover:bg-[#0088cc] transition-transform hover:scale-110 shadow-xl text-white"
+                                                    title="Live Website"
+                                                >
+                                                    <Globe className="w-5 h-5" />
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="p-6">
-                                        <div className="text-sm text-[#00aaff] font-medium mb-2">
-                                            {project.category}
+                                        <div className="flex justify-between items-start mb-2">
+                                            <div className="text-xs font-bold text-[#00aaff] uppercase tracking-wider">
+                                                {project.category}
+                                            </div>
                                         </div>
-                                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                        <h3 className="text-xl font-bold mb-2 group-hover:text-[#00aaff] transition-colors">{project.title}</h3>
                                         <p className="text-gray-600 text-sm line-clamp-2">
                                             {project.description}
                                         </p>
@@ -199,10 +226,30 @@ export default function PortfolioPage() {
                                             <h3 className="text-xl font-bold mb-3">Results</h3>
                                             <p className="text-gray-700 mb-6">{project.results}</p>
 
-                                            <button className="w-full px-6 py-3 bg-gradient-to-r from-[#00aaff] to-[#0088cc] text-white rounded-lg font-semibold hover:shadow-lg transition-shadow flex items-center justify-center gap-2">
-                                                View Case Study
-                                                <ExternalLink className="w-5 h-5" />
-                                            </button>
+                                            <div className="flex flex-col sm:flex-row gap-4">
+                                                {"github" in project && project.github && (
+                                                    <a
+                                                        href={project.github as string}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex-1 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+                                                    >
+                                                        <Github className="w-5 h-5" />
+                                                        View Code
+                                                    </a>
+                                                )}
+                                                {"demo" in project && project.demo && (
+                                                    <a
+                                                        href={project.demo as string}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-[#00aaff] to-[#0088cc] text-white rounded-lg font-semibold hover:shadow-lg transition-shadow flex items-center justify-center gap-2"
+                                                    >
+                                                        <Globe className="w-5 h-5" />
+                                                        Live Website
+                                                    </a>
+                                                )}
+                                            </div>
                                         </div>
                                     </>
                                 );
