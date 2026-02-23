@@ -30,6 +30,39 @@ const projects = [
     },
     {
         id: 3,
+        title: "EmpowerHer",
+        category: "Social Good",
+        image: "https://api.microlink.io?url=https://empower-her-henna.vercel.app/&screenshot=true&embed=screenshot.url",
+        description: "A platform dedicated to women's empowerment, resource sharing, and community support.",
+        technologies: ["React", "Next.js", "Tailwind CSS", "Firebase"],
+        results: "Providing essential resources to community members",
+        github: "https://github.com/chandanone/empowerHer",
+        demo: "https://empower-her-henna.vercel.app/",
+    },
+    {
+        id: 4,
+        title: "AI Image Generator",
+        category: "AI/ML",
+        image: "https://api.microlink.io?url=https://image-gen-gold-one.vercel.app/&screenshot=true&embed=screenshot.url",
+        description: "Advanced AI tool that generates stunning images from text prompts using cutting-edge models.",
+        technologies: ["Next.js", "OpenAI API", "Cloudinary", "Auth.js"],
+        results: "Instant creative asset generation",
+        github: "https://github.com/chandanone/image_gen",
+        demo: "https://image-gen-gold-one.vercel.app/",
+    },
+    {
+        id: 5,
+        title: "EcoExchange",
+        category: "Sustainability",
+        image: "https://api.microlink.io?url=https://eco-exchange-chandan.vercel.app/&screenshot=true&embed=screenshot.url",
+        description: "A sustainable marketplace for exchanging eco-friendly products and promoting green living.",
+        technologies: ["React", "Node.js", "MongoDB", "Express"],
+        results: "Enabling sustainable trade and reducing waste",
+        github: "https://github.com/chandanone/EcoExchange",
+        demo: "https://eco-exchange-chandan.vercel.app/",
+    },
+    {
+        id: 6,
         title: "TB-Sense AI",
         category: "AI/ML",
         image: "https://api.microlink.io?url=https://tb-sense.vercel.app&screenshot=true&embed=screenshot.url",
@@ -41,7 +74,7 @@ const projects = [
     },
 ];
 
-const categories = ["All", "Web Development", "AI/ML"];
+const categories = ["All", "Web Development", "AI/ML", "Social Good", "Sustainability"];
 
 export default function PortfolioPage() {
     const [selectedCategory, setSelectedCategory] = useState("All");
