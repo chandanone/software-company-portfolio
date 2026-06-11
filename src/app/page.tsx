@@ -1,31 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Smartphone, Cloud, Sparkles } from "lucide-react";
+import { ArrowRight, ScanIcon, FileImageIcon, ImageIcon } from "lucide-react";
 import { HeroBackground } from "@/components/ui/hero-background";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from "next/link";
 
-const services = [
+const tools = [
   {
-    icon: <Code className="w-8 h-8 text-[#667eea]" />,
-    title: "Web Development",
-    description: "Custom web applications built with modern frameworks.",
+    icon: <ScanIcon className="w-8 h-8 text-[#00aaff]" />,
+    title: "AI Background Remover",
+    description: "Remove backgrounds from images instantly in your browser using on-device AI. 100% private.",
+    href: "/tools/bg-remover",
   },
   {
-    icon: <Smartphone className="w-8 h-8 text-[#667eea]" />,
-    title: "Mobile Apps",
-    description: "Native and cross-platform mobile solutions for iOS and Android.",
+    icon: <FileImageIcon className="w-8 h-8 text-[#00aaff]" />,
+    title: "Image to PDF Converter",
+    description: "Combine multiple images into a single PDF document. Drag to reorder, choose size and margin.",
+    href: "/tools/image-to-pdf",
   },
   {
-    icon: <Cloud className="w-8 h-8 text-[#667eea]" />,
-    title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and deployment strategies.",
-  },
-  {
-    icon: <Sparkles className="w-8 h-8 text-[#667eea]" />,
-    title: "AI/ML Integration",
-    description: "Intelligent features powered by machine learning and AI.",
+    icon: <ImageIcon className="w-8 h-8 text-[#00aaff]" />,
+    title: "PDF Page Rearranger",
+    description: "Upload any PDF, drag and drop pages to rearrange, delete pages, and export a new PDF document.",
+    href: "/tools/pdf-rearrange",
   },
 ];
 
@@ -82,7 +80,7 @@ export default function HomePage() {
         </HeroBackground>
       </section>
 
-      {/* Services Preview Section */}
+      {/* Utilities Tools Preview Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -94,30 +92,32 @@ export default function HomePage() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-[#00aaff] to-[#0088cc] bg-clip-text text-transparent">
-                Our Services
+                Utilities Tools
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive digital solutions tailored to your business needs
+              Fast, secure, and run 100% locally in your browser. No file uploads required.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {tools.map((tool, index) => (
               <motion.div
-                key={service.title}
+                key={tool.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card hoverable>
-                  <CardHeader>
-                    <div className="mb-4">{service.icon}</div>
-                    <CardTitle>{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                </Card>
+                <Link href={tool.href} className="block h-full">
+                  <Card hoverable className="h-full hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+                    <CardHeader>
+                      <div className="mb-4">{tool.icon}</div>
+                      <CardTitle>{tool.title}</CardTitle>
+                      <CardDescription>{tool.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -129,13 +129,13 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mt-12"
           >
-            <Link href="/services">
+            <Link href="/tools">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-[#00aaff] to-[#0088cc] text-white rounded-full font-semibold inline-flex items-center gap-2"
               >
-                View All Services
+                Explore All Tools
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>
